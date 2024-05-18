@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import '../styles/MainStyle.css';
+import React from 'react';
+import '../styles/Header.css';
 
 export default function Header() {
+  function Page1() {
+    console.log("page1");
+  };
+
+  function Page2() {
+    console.log("page2");
+  };
+
   return (
-    <div>
-      <div style={{ backgroundColor: "yellow" }}>
-        <table>
-          <tr>
-            <td style={{ paddingRight: 50 }}><span style={{ fontSize: 40 }}>logo</span></td>
-            <td>nav1</td>
-            <td>nav2</td>
-          </tr>
-        </table>
+    <header className="header">
+      <div className="title">web_pf</div>
+      <div className="button-group">
+        <button onClick={Page1}>Page 1</button>
+        <button onClick={Page2}>Page 2</button>
       </div>
-    </div>
+    </header>
   );
-}
+};
